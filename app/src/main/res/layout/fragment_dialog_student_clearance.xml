@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/stRegisterWrapper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/design_gradient_grey"
+    android:padding="12dp"
+    tools:context=".FragmentDialogStudentClearance">
+    <LinearLayout
+        android:id="@+id/askQHeader"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="2dp"
+        android:baselineAligned="false">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:textAllCaps="true"
+                android:textSize="16sp"
+                android:textColor="@color/colorRed"
+                android:layout_height="wrap_content"
+                android:text="#Student's Clearance "
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_marginRight="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/design_bottom_border_red"/>
+
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/closeDialogFrag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/design_border_radius_grey"
+            android:padding="6dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingEnd="12dp">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:padding="3dp"
+                android:background="@drawable/design_circle_border_like_btn"
+                app:srcCompat="@drawable/ic_close_black_24dp"
+                tools:ignore="ContentDescription"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="close"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/askQBody"
+        android:layout_below="@id/askQHeader"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1px"
+                android:background="#bbb"
+                android:layout_margin="4dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorDarkBlue"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="6dp"
+                android:text="ADSU final year online clearance form:"/>
+
+
+
+            <com.github.florent37.shapeofview.shapes.CutCornerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:shape_cutCorner_bottomLeftSize="5dp"
+                app:shape_cutCorner_topLeftSize="5dp"
+                android:layout_marginTop="4dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#fff"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorDarkBlue"
+                        android:text="Detail:"
+                        android:textColor="#fff"
+                        android:padding="8dp"
+                        android:paddingStart="8dp"
+                        android:paddingLeft="8dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="Final year clearance"
+                        android:padding="4dp"
+                        android:gravity="end"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+
+            </com.github.florent37.shapeofview.shapes.CutCornerView>
+            <com.github.florent37.shapeofview.shapes.CutCornerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:shape_cutCorner_bottomLeftSize="5dp"
+                app:shape_cutCorner_topLeftSize="5dp"
+                android:layout_marginTop="4dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#fff"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorDarkBlue"
+                        android:text="Clearance for:"
+                        android:textColor="#fff"
+                        android:padding="8dp"
+                        android:paddingStart="8dp"
+                        android:paddingLeft="8dp" />
+                    <TextView
+                        android:id="@+id/clearance_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="Library"
+                        android:padding="4dp"
+                        android:gravity="end"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+
+            </com.github.florent37.shapeofview.shapes.CutCornerView>
+            <com.github.florent37.shapeofview.shapes.CutCornerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:shape_cutCorner_bottomLeftSize="5dp"
+                app:shape_cutCorner_topLeftSize="5dp"
+                android:layout_marginTop="4dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#fff"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorDarkBlue"
+                        android:text="Clearance fee:"
+                        android:textColor="#fff"
+                        android:padding="8dp"
+                        android:paddingStart="8dp"
+                        android:paddingLeft="8dp" />
+                    <TextView
+                        android:id="@+id/clearance_fee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="NGN500"
+                        android:padding="4dp"
+                        android:gravity="end"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+
+            </com.github.florent37.shapeofview.shapes.CutCornerView>
+            <com.github.florent37.shapeofview.shapes.CutCornerView
+                android:id="@+id/clearance_status_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:shape_cutCorner_bottomLeftSize="5dp"
+                app:shape_cutCorner_topLeftSize="5dp"
+                android:layout_marginTop="4dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#fff"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorDarkBlue"
+                        android:text="Clearance status:"
+                        android:textColor="#fff"
+                        android:padding="8dp"
+                        android:paddingStart="8dp"
+                        android:paddingLeft="8dp" />
+                    <TextView
+                        android:id="@+id/clearance_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="Uncleared"
+                        android:padding="4dp"
+                        android:gravity="end"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+
+            </com.github.florent37.shapeofview.shapes.CutCornerView>
+
+
+            <com.github.florent37.shapeofview.shapes.CutCornerView
+                android:id="@+id/pay_with_atm_and_clear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:shape_cutCorner_bottomLeftSize="3dp"
+                app:shape_cutCorner_topLeftSize="3dp"
+                app:shape_cutCorner_topRightSize="3dp"
+                app:shape_cutCorner_bottomRightSize="3dp"
+                android:layout_marginTop="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:padding="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pay Online with ATM &amp; clear yourself"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:padding="8dp" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/ic_keyboard_arrow_right_white_24dp"
+                        tools:ignore="ContentDescription"
+                        android:layout_marginLeft="-10dp"
+                        android:layout_marginStart="-10dp" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/ic_keyboard_arrow_right_white_24dp"
+                        tools:ignore="ContentDescription"
+                        android:layout_marginLeft="-18dp"
+                        android:layout_marginStart="-18dp" />
+
+                </LinearLayout>
+
+            </com.github.florent37.shapeofview.shapes.CutCornerView>
+            <com.github.florent37.shapeofview.shapes.BubbleView
+                android:id="@+id/cancel_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:shape_bubble_arrowHeight="10dp"
+                app:shape_bubble_arrowWidth="10dp"
+                app:shape_bubble_arrowPosition="top"
+                app:shape_bubble_borderRadius="10dp"
+                android:layout_marginTop="4dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorAccent"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:paddingTop="8dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cancel"
+                        android:textStyle="bold"
+                        android:textColor="#fff"
+                        android:padding="16dp" />
+
+                </LinearLayout>
+
+            </com.github.florent37.shapeofview.shapes.BubbleView>
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+</RelativeLayout>

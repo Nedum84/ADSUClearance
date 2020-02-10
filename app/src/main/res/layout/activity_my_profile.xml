@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#f4f4f4">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ActivityMyProfile">
+
+        <RelativeLayout
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@drawable/sample"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@drawable/sample2"/>
+
+        <LinearLayout
+            android:id="@+id/photoNameWrapper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/background"
+            android:layout_marginTop="-100dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/adsu_logo1"
+                app:civ_border_color="#BCffffff"
+                app:civ_border_width="8dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="24dp"
+                android:layout_gravity="bottom">
+
+                <TextView
+                    android:id="@+id/fullname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="CHANDAN Sandra"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/black"/>
+
+                <TextView
+                    android:id="@+id/reg_no1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="12u/4355312"
+                    android:gravity="center_horizontal"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_below="@id/photoNameWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:orientation="vertical">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#bdbdbd"
+                android:layout_margin="8dp"
+                android:layout_marginBottom="12dp"/>
+
+            <com.github.florent37.shapeofview.shapes.CutCornerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:shape_cutCorner_bottomLeftSize="5dp"
+                app:shape_cutCorner_topLeftSize="5dp"
+                android:layout_marginTop="4dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#fff"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorDarkBlue"
+                        android:text="First Name:"
+                        android:textColor="#fff"
+                        android:padding="8dp"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp" />
+                    <TextView
+                        android:id="@+id/first_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="Emeka"
+                        android:padding="4dp"
+                        android:gravity="end"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+
+            </com.github.florent37.shapeofview.shapes.CutCornerView>
+            <com.github.florent37.shapeofview.shapes.CutCornerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:shape_cutCorner_bottomLeftSize="5dp"
+                app:shape_cutCorner_topLeftSize="5dp"
+                android:layout_marginTop="4dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#fff"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorDarkBlue"
+                        android:text="Surname:"
+                        android:textColor="#fff"
+                        android:padding="8dp"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp" />
+                    <TextView
+                        android:id="@+id/sur_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="Emmanuel"
+                        android:padding="4dp"
+                        android:gravity="end"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+
+            </com.github.florent37.shapeofview.shapes.CutCornerView>
+            <com.github.florent37.shapeofview.shapes.CutCornerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:shape_cutCorner_bottomLeftSize="5dp"
+                app:shape_cutCorner_topLeftSize="5dp"
+                android:layout_marginTop="4dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#fff"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorDarkBlue"
+                        android:text="Phone number:"
+                        android:textColor="#fff"
+                        android:padding="8dp"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp" />
+                    <TextView
+                        android:id="@+id/phone_number"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="0812323434121"
+                        android:padding="4dp"
+                        android:gravity="end"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+
+            </com.github.florent37.shapeofview.shapes.CutCornerView>
+            <com.github.florent37.shapeofview.shapes.CutCornerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:shape_cutCorner_bottomLeftSize="5dp"
+                app:shape_cutCorner_topLeftSize="5dp"
+                android:layout_marginTop="4dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#fff"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorDarkBlue"
+                        android:text="Othernames:"
+                        android:textColor="#fff"
+                        android:padding="8dp"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp" />
+                    <TextView
+                        android:id="@+id/other_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="Goddey"
+                        android:padding="4dp"
+                        android:gravity="end"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+
+            </com.github.florent37.shapeofview.shapes.CutCornerView>
+            <com.github.florent37.shapeofview.shapes.CutCornerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:shape_cutCorner_bottomLeftSize="5dp"
+                app:shape_cutCorner_topLeftSize="5dp"
+                android:layout_marginTop="4dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#fff"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorDarkBlue"
+                        android:text="Reg No.:"
+                        android:textColor="#fff"
+                        android:padding="8dp"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp" />
+                    <TextView
+                        android:id="@+id/reg_no2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="12u/237632"
+                        android:padding="4dp"
+                        android:gravity="end"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+
+            </com.github.florent37.shapeofview.shapes.CutCornerView>
+            <com.github.florent37.shapeofview.shapes.CutCornerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:shape_cutCorner_bottomLeftSize="5dp"
+                app:shape_cutCorner_topLeftSize="5dp"
+                android:layout_marginTop="4dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#fff"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorDarkBlue"
+                        android:text="Gender:"
+                        android:textColor="#fff"
+                        android:padding="8dp"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp" />
+                    <TextView
+                        android:id="@+id/gender"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="Male"
+                        android:padding="4dp"
+                        android:gravity="end"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+
+            </com.github.florent37.shapeofview.shapes.CutCornerView>
+            <com.github.florent37.shapeofview.shapes.CutCornerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:shape_cutCorner_bottomLeftSize="5dp"
+                app:shape_cutCorner_topLeftSize="5dp"
+                android:layout_marginTop="4dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#fff"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorDarkBlue"
+                        android:text="Department:"
+                        android:textColor="#fff"
+                        android:padding="8dp"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp" />
+                    <TextView
+                        android:id="@+id/department"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="Computer Science"
+                        android:padding="4dp"
+                        android:gravity="end"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+
+            </com.github.florent37.shapeofview.shapes.CutCornerView>
+            <com.github.florent37.shapeofview.shapes.CutCornerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:shape_cutCorner_bottomLeftSize="5dp"
+                app:shape_cutCorner_topLeftSize="5dp"
+                android:layout_marginTop="4dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#fff"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorDarkBlue"
+                        android:text="Faculty:"
+                        android:textColor="#fff"
+                        android:padding="8dp"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp" />
+                    <TextView
+                        android:id="@+id/faculty"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="Science"
+                        android:padding="4dp"
+                        android:gravity="end"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+
+            </com.github.florent37.shapeofview.shapes.CutCornerView>
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/arrow_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="3dp"
+            android:layout_margin="8dp"
+            android:background="?android:selectableItemBackground"
+            app:srcCompat="@drawable/ic_arrow_back_white_24dp"
+            tools:ignore="ContentDescription"/>
+    </RelativeLayout>
+
+</ScrollView>

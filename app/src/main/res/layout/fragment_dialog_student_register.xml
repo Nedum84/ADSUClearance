@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/design_gradient_grey"
+    android:padding="8dp"
+    tools:context=".FragmentDialogStudentRegister">
+    <RelativeLayout
+        android:id="@+id/stRegisterWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/askQHeader"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="2dp"
+            android:baselineAligned="false">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textAllCaps="true"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorRed"
+                    android:layout_height="wrap_content"
+                    android:text="#Student Register"
+                    android:textStyle="bold"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/design_bottom_border_red"/>
+
+            </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/closeDialogFrag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/design_border_radius_grey"
+                android:padding="6dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="12dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingEnd="12dp">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:padding="3dp"
+                    android:background="@drawable/design_circle_border_like_btn"
+                    app:srcCompat="@drawable/ic_close_black_24dp"
+                    tools:ignore="ContentDescription"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="close"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/askQBody"
+            android:layout_below="@id/askQHeader"
+            android:layout_above="@+id/askQFooter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorDarkBlue"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="6dp"
+                    android:text="Student Details:"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/st_surname"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/design_border_grey"
+                        android:hint="Surname..."
+                        android:layout_weight="1"
+                        style="@style/editTextStRegister"
+                        tools:ignore="Autofill" />
+                    <EditText
+                        android:id="@+id/st_firstname"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/design_border_grey"
+                        android:hint="First name..."
+                        android:layout_weight="1"
+                        style="@style/editTextStRegister"
+                        tools:ignore="Autofill" />
+
+                </LinearLayout>
+                <EditText
+                    android:id="@+id/st_othername"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/design_border_grey"
+                    android:hint="Other names..."
+                    style="@style/editTextStRegister"
+                    tools:ignore="Autofill" />
+                <EditText
+                    android:id="@+id/st_regno"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/design_border_grey"
+                    android:hint="Reg Number"
+                    style="@style/editTextStRegister"
+                    tools:ignore="Autofill" />
+                <EditText
+                    android:id="@+id/st_phone_number"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/design_border_grey"
+                    android:hint="Phone Number"
+                    style="@style/editTextStRegister"
+                    tools:ignore="Autofill,TextFields" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        style="@style/editTextStRegisterSpinner">
+                        <Spinner
+                            android:id="@+id/st_department"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        style="@style/editTextStRegisterSpinner">
+                        <Spinner
+                            android:id="@+id/st_faculty"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        style="@style/editTextStRegisterSpinner">
+                        <Spinner
+                            android:id="@+id/st_gender"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>
+                    <EditText
+                        android:id="@+id/st_dob"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/design_border_grey"
+                        android:hint="Date of Birth"
+                        android:layout_weight="2"
+                        style="@style/editTextStRegister"
+                        android:padding="12dp"
+                        tools:ignore="Autofill" />
+
+                </LinearLayout>
+                <EditText
+                    android:id="@+id/st_place_of_birth"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/design_border_grey"
+                    android:hint="Place of Birth"
+                    style="@style/editTextStRegister"
+                    tools:ignore="Autofill" />
+                <EditText
+                    android:id="@+id/st_place_of_origin"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/design_border_grey"
+                    android:hint="Place of origin"
+                    style="@style/editTextStRegister"
+                    tools:ignore="Autofill" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:baselineAligned="false">
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        style="@style/editTextStRegisterSpinner">
+                        <Spinner
+                            android:id="@+id/st_nationality"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        style="@style/editTextStRegisterSpinner">
+                        <Spinner
+                            android:id="@+id/st_marital_status"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        style="@style/editTextStRegisterSpinner">
+                        <Spinner
+                            android:id="@+id/st_religion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        style="@style/editTextStRegisterSpinner">
+                        <Spinner
+                            android:id="@+id/st_mode_of_entry"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:baselineAligned="false">
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        style="@style/editTextStRegisterSpinner">
+                        <Spinner
+                            android:id="@+id/st_program_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        style="@style/editTextStRegisterSpinner">
+                        <Spinner
+                            android:id="@+id/st_year_of_entry"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:baselineAligned="false">
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        style="@style/editTextStRegisterSpinner">
+                        <Spinner
+                            android:id="@+id/st_course_duration"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        style="@style/editTextStRegisterSpinner">
+                        <Spinner
+                            android:id="@+id/st_award_in_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorDarkBlue"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="6dp"
+                    android:text="Next of Kin Details:"/>
+                <EditText
+                    android:id="@+id/st_next_of_kin_name"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/design_border_grey"
+                    android:hint="Next of kin name..."
+                    style="@style/editTextStRegister"
+                    tools:ignore="Autofill" />
+                <EditText
+                    android:id="@+id/st_next_of_kin_addr"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/design_border_grey"
+                    android:hint="Address..."
+                    style="@style/editTextStRegister"
+                    tools:ignore="Autofill" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorDarkBlue"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="6dp"
+                    android:text="Sponsor Details:"/>
+                <EditText
+                    android:id="@+id/st_sponsor_name"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/design_border_grey"
+                    android:hint="Name..."
+                    style="@style/editTextStRegister"
+                    tools:ignore="Autofill" />
+                <EditText
+                    android:id="@+id/st_sponsor_addr"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/design_border_grey"
+                    android:hint="Address..."
+                    style="@style/editTextStRegister"
+                    tools:ignore="Autofill" />
+
+
+            </LinearLayout>
+
+
+
+        </ScrollView>
+        <LinearLayout
+            android:id="@+id/askQFooter"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:id="@+id/saveQuestionAsDraft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/stAlreadyRegisteredBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Already Registered?"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:background="#40ffffff"
+                    android:textColor="@color/colorRed"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:padding="8dp"
+                    android:paddingRight="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingLeft="16dp"
+                    android:paddingStart="16dp"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <LinearLayout
+                android:id="@+id/registerBtn"
+                android:gravity="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:layout_marginTop="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Register"
+                    android:textColor="#FFF"
+                    android:textSize="17sp"
+                    android:background="#40000000"
+                    android:padding="8dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/stLoginWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <LinearLayout
+            android:id="@+id/askQHeader2"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="2dp"
+            android:baselineAligned="false">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textAllCaps="true"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorRed"
+                    android:layout_height="wrap_content"
+                    android:text="#Student Login"
+                    android:textStyle="bold"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/design_bottom_border_red"/>
+
+            </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/closeDialogFrag2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/design_border_radius_grey"
+                android:padding="6dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="12dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingEnd="12dp">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:padding="3dp"
+                    android:background="@drawable/design_circle_border_like_btn"
+                    app:srcCompat="@drawable/ic_close_black_24dp"
+                    tools:ignore="ContentDescription"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="close"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/askQBody2"
+            android:layout_below="@id/askQHeader2"
+            android:layout_above="@+id/askQFooter2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:focusable="true"
+                android:padding="12dp"
+                android:focusableInTouchMode="true">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorDarkBlue"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="6dp"
+                    android:text="Enter Reg No. Login"/>
+                <EditText
+                    android:id="@+id/st_login_regno"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/design_border_grey"
+                    android:hint="Reg Number..."
+                    style="@style/editTextStRegister"
+                    tools:ignore="Autofill" />
+
+
+
+            </LinearLayout>
+
+
+
+        </ScrollView>
+        <LinearLayout
+            android:id="@+id/askQFooter2"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/stNotRegisteredBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Not Registered?"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:background="#40ffffff"
+                    android:textColor="@color/colorRed"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:padding="8dp"
+                    android:paddingRight="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingLeft="16dp"
+                    android:paddingStart="16dp"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <LinearLayout
+                android:id="@+id/loginBtn"
+                android:gravity="end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:layout_marginTop="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Login"
+                    android:textColor="#FFF"
+                    android:textSize="17sp"
+                    android:background="#40000000"
+                    android:padding="8dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>
